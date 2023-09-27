@@ -179,8 +179,9 @@ onMounted(async () => {
           <div class="flex w-2/5 text-gray-600">Users</div>
           <div class="flex w-2/5 text-gray-600">Date Joined</div>
           <div class="flex w-2/5 text-gray-600">Access</div>
-          <div class="flex w-2/5 text-gray-600">Added By</div>
-          <div class="flex w-1/5 text-gray-600">Action</div>
+          <!-- TODO: add option to view added-by when API is ready -->
+          <!-- <div class="flex w-2/5 text-gray-600">Added By</div> -->
+          <div class="flex w-2/5 text-gray-600">Action</div>
         </div>
 
         <div class="flex flex-col nc-scrollbar-md">
@@ -215,8 +216,9 @@ onMounted(async () => {
                 </template>
               </div>
             </div>
-            <div class="w-2/5"></div>
-            <div class="w-1/5 pl-5">
+            <!-- TODO: add option to view added-by when API is ready -->
+            <!-- <div class="w-2/5"></div> -->
+            <div class="w-2/5 pl-5">
               <NcDropdown v-if="collab.roles !== ProjectRoles.OWNER" :trigger="['click']">
                 <MdiDotsVertical
                   class="border-1 !text-gray-600 h-5.5 w-5.5 rounded outline-0 p-0.5 nc-workspace-menu transform transition-transform !text-gray-400 cursor-pointer hover:(!text-gray-500 bg-gray-100)" />
