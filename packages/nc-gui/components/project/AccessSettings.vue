@@ -174,7 +174,7 @@ onMounted(async () => {
         class="nc-collaborators-list w-full h-full flex flex-col items-center justify-center mt-36">
         <Empty description="No members found" />
       </div>
-      <div v-else class="nc-collaborators-list !mt-10 nc-scrollbar-md rounded-md">
+      <div v-else class="nc-collaborators-list !mt-10 nc-scrollbar-md">
         <div class="nc-collaborators-list-header bg-gray-50 rounded-t-md">
           <div class="flex w-2/5 text-gray-600">Users</div>
           <div class="flex w-2/5 text-gray-600">Date Joined</div>
@@ -183,7 +183,7 @@ onMounted(async () => {
           <!-- <div class="flex w-2/5 text-gray-600">Added By</div> -->
         </div>
 
-        <div class="flex flex-col nc-scrollbar-md">
+        <div class="flex flex-col">
           <div v-for="(collab, i) of collaborators" :key="i"
             class="relative w-full nc-collaborators nc-collaborators-list-row">
             <div class="!py-0 w-2/5 email truncate">
@@ -205,8 +205,8 @@ onMounted(async () => {
               <div class="nc-collaborator-role-select p-2">
                 <template v-if="accessibleRoles.includes(collab.roles)">
                   <RolesSelector :role="collab.roles" :roles="accessibleRoles" :inherit="isEeUI && collab.workspace_roles && WorkspaceRolesToProjectRoles[collab.workspace_roles]
-                      ? WorkspaceRolesToProjectRoles[collab.workspace_roles]
-                      : null
+                    ? WorkspaceRolesToProjectRoles[collab.workspace_roles]
+                    : null
                     " :description="false"
                     :on-role-change="(role: ProjectRoles) => updateCollaborator(collab, role)" />
                 </template>
@@ -240,17 +240,16 @@ onMounted(async () => {
 }
 
 .nc-collaborators-list {
-  @apply border-2 shadow-sm border-gray-100 mt-1 flex flex-col w-full;
-  // todo: replace/remove 120px with proper value while updating invite ui
-  height: calc(100vh - calc(var(--topbar-height) + 9rem + 120px));
+  @apply border-1 shadow-md border-gray-100 rounded-xl mt-1 flex flex-col w-full;
+  max-height: calc(100vh - calc(var(--topbar-height) + 9rem + 120px));
 }
 
 .nc-collaborators-list-header {
-  @apply flex flex-row justify-between items-center min-h-10 border-b-2 shadow-sm border-gray-100 pl-4;
+  @apply flex flex-row justify-between items-center min-h-10 border-[1px] border-gray-100 pl-4;
 }
 
 .nc-collaborators-list-row {
-  @apply flex flex-row justify-between items-center min-h-16 border-b-2 shadow-sm border-gray-100 pl-4;
+  @apply flex flex-row justify-between items-center min-h-16 border-[1px] border-gray-100 pl-4;
 }
 
 .color-band {

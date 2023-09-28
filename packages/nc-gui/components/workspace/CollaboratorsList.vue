@@ -114,21 +114,20 @@ onMounted(async () => {
 
 <style scoped lang="scss">
 .badge-text {
-  @apply text-[14px] pt-1 text-center;
+  @apply text-[14px] flex items-center justify-center gap-1 pt-0.5;
 }
 
 .nc-collaborators-list {
-  @apply border-2 shadow-sm border-gray-100 mt-1 flex flex-col w-full;
-  // todo: replace/remove 120px with proper value while updating invite ui
-  height: calc(100vh - calc(var(--topbar-height) + 9rem + 120px));
+  @apply border-1 shadow-sm border-gray-100 rounded-xl mt-1 flex flex-col w-full;
+  max-height: calc(100vh - calc(var(--topbar-height) + 9rem + 120px));
 }
 
 .nc-collaborators-list-header {
-  @apply flex flex-row justify-between items-center min-h-10 border-b-2 shadow-sm border-gray-100 pl-4;
+  @apply flex flex-row justify-between items-center min-h-10 border-[1px] border-gray-100 pl-4;
 }
 
 .nc-collaborators-list-row {
-  @apply flex flex-row justify-between items-center min-h-16 border-b-2 shadow-sm border-gray-100 pl-4;
+  @apply flex flex-row justify-between items-center min-h-16 border-[1px] border-gray-100 pl-4;
 }
 
 .color-band {
@@ -141,90 +140,5 @@ onMounted(async () => {
 
 :deep(.ant-select-selection-item) {
   @apply mt-0.75;
-}
-
-.nc-collaborators-list-table {
-  @apply min-w-[700px] !w-full border-gray-100 mt-1;
-
-  th {
-    @apply .font-normal !text-gray-400 pb-4;
-    border-bottom: 1px solid #e3e3e3;
-  }
-
-  td {
-    @apply .font-normal pb-4;
-    border-bottom: 1px solid #f5f5f5;
-  }
-
-  th,
-  td {
-    @apply text-left p-4;
-  }
-
-  th:first-child,
-  td:first-child {
-    @apply pl-6;
-  }
-
-  th:last-child,
-  td:last-child {
-    @apply pr-1 w-5;
-  }
-}
-
-table {
-  display: block;
-  width: 100%;
-}
-
-thead {
-  display: block;
-  width: 100%;
-}
-
-tr {
-  display: block;
-  width: 100%;
-}
-
-tbody {
-  display: block;
-  width: 100%;
-  height: calc(100vh - calc(var(--topbar-height) + 25rem));
-  overflow-y: overlay;
-
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #f6f6f600 !important;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #f6f6f600;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: #f6f6f600;
-  }
-}
-
-tbody {
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #f6f6f600 !important;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: rgb(215, 215, 215);
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: rgb(203, 203, 203);
-  }
 }
 </style>

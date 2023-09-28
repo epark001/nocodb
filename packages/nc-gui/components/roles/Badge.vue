@@ -48,7 +48,7 @@ const roleProperties = computed(() => {
   >
     <NcBadge class="!px-2" :color="roleProperties.color" :border="borderRef" :size="sizeSelect">
       <div
-        class="badge-text flex items-center gap-2"
+        class="badge-text flex items-center gap-2 whitespace-nowrap"
         :class="{
           'text-purple-500': roleProperties.color === 'purple',
           'text-blue-500': roleProperties.color === 'blue',
