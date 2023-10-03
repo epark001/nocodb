@@ -11,7 +11,7 @@ Icon
 # ==========================
 .nodemonignore
 .sass-cache/
-node_modules/
+# node_modules/
 help/
 a
 public/lib/
