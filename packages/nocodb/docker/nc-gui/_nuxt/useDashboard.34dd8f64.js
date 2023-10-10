@@ -1,0 +1,1 @@
+import{g as o,i as t}from"./entry.13466615.js";function n(){const r=o().currentRoute;return{dashboardUrl:t(()=>`${location.origin}${(location.pathname||"").replace(r.value.path,"")}`)}}export{n as u};

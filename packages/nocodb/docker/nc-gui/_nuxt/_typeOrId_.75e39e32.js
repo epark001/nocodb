@@ -1,0 +1,1 @@
+import{h as o,g as n,o as r,c as a,b as s,E as c,c6 as u}from"./entry.13466615.js";const f=o({__name:"[typeOrId]",setup(p){const e=n().currentRoute;return(l,m)=>{const t=u;return r(),a("div",null,[s(t,{transition:!1,"page-key":c(e).params.typeOrId},null,8,["page-key"])])}}});export{f as default};
